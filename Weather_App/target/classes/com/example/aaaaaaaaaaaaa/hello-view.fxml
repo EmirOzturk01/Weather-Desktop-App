@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="pane" fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="519.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.aaaaaaaaaaaaa.HelloController">
+    <children>
+        <ImageView id="placeMarker" fitHeight="40.0" fitWidth="40.0" layoutX="130.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@image/icons8-location-96.png" />
+            </image></ImageView>
+        <TextField id="search" fx:id="search" layoutX="177.0" layoutY="54.0" prefHeight="25.0" prefWidth="185.0" promptText="Search" />
+      <AnchorPane id="menuBar" fx:id="menuBar" layoutX="15.0" layoutY="12.0" prefHeight="200.0" prefWidth="39.0">
+         <children>
+            <ImageView fx:id="screenShot" fitHeight="36.0" fitWidth="39.0" layoutX="2.0" layoutY="42.0" onMouseClicked="#weatherSnapshot" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/icons8-screenshot-64.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="favouriteButton" fitHeight="32.0" fitWidth="35.0" layoutX="5.0" layoutY="93.0" onMouseClicked="#switchToFav" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/icons8-favorites-100.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+        <ImageView fx:id="searchIcon" fitHeight="24.0" fitWidth="27.0" layoutX="366.0" layoutY="55.0" onMouseClicked="#city" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@image/icons8-search-128.png" />
+            </image>
+        </ImageView>
+      <AnchorPane id="PaneDown" fx:id="navPane" layoutX="128.0" layoutY="164.0" prefHeight="200.0" prefWidth="260.0">
+         <children>
+            <ImageView fitHeight="56.0" fitWidth="56.0" layoutX="189.0" layoutY="135.0" onMouseClicked="#googleMaps" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/icons8-google-maps-old-100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="56.0" fitWidth="56.0" layoutX="14.0" layoutY="135.0" onMouseClicked="#googleImages" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/icons8-google-images-100.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="49.0" layoutX="103.0" layoutY="136.0" onMouseClicked="#FavouriteAdd" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/icons8-add-to-favorites-100.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="86.0" layoutY="175.0" onMouseClicked="#FavouriteAdd" text="Add to Favourite" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+        <AnchorPane id="truePane" fx:id="truePane" layoutX="128.0" layoutY="104.0" prefHeight="262.0" prefWidth="253.0" visible="false">
+            <children>
+                <ImageView id="weather" fx:id="clearSky" fitHeight="143.0" fitWidth="143.0" layoutX="55.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/clearSky.png" />
+               </image></ImageView>
+                <Label fx:id="weatherText" layoutX="52.0" layoutY="153.0" prefHeight="25.0" prefWidth="143.0" text="Label">
+                    <font>
+                        <Font name="System Bold" size="25.0" />
+                    </font>
+                </Label>
+                <Label fx:id="cityCountry" layoutX="38.0" layoutY="189.0" prefHeight="25.0" prefWidth="171.0" text="Label">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+            <ImageView fitHeight="25.0" fitWidth="24.0" layoutX="14.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/humidity.png" />
+               </image>
+            </ImageView>
+            <Label id="humidity" fx:id="hum" layoutX="38.0" layoutY="207.0" prefHeight="56.0" prefWidth="56.0" text="Label" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <ImageView id="weather" fx:id="mist" fitHeight="143.0" fitWidth="143.0" layoutX="55.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/mist.png" />
+               </image>
+            </ImageView>
+            <ImageView id="weather" fx:id="scatteredClouds" fitHeight="143.0" fitWidth="143.0" layoutX="55.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/scatteredClouds.png" />
+               </image>
+            </ImageView>
+            <ImageView id="weather" fx:id="fewClouds" fitHeight="143.0" fitWidth="143.0" layoutX="55.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/fewClouds.png" />
+               </image>
+            </ImageView>
+            <ImageView id="weather" fx:id="brokenClouds" fitHeight="143.0" fitWidth="143.0" layoutX="55.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/brokenClouds.png" />
+               </image>
+            </ImageView>
+            <ImageView id="weather" fx:id="showerRain" fitHeight="143.0" fitWidth="143.0" layoutX="55.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/showerRain.png" />
+               </image>
+            </ImageView>
+            <ImageView id="weather" fx:id="rain" fitHeight="143.0" fitWidth="143.0" layoutX="55.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/rain.png" />
+               </image>
+            </ImageView>
+            <ImageView id="weather" fx:id="thunderstorm" fitHeight="143.0" fitWidth="143.0" layoutX="55.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/thunderstorm.png" />
+               </image>
+            </ImageView>
+            <ImageView id="weather" fx:id="snow" fitHeight="143.0" fitWidth="143.0" layoutX="55.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/snow.png" />
+               </image>
+            </ImageView>
+            <Label id="humidity" fx:id="tempMin" layoutX="-14.0" layoutY="169.0" prefHeight="40.0" prefWidth="81.0" text="Label" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label id="humidity" fx:id="tempMax" layoutX="179.0" layoutY="169.0" prefHeight="40.0" prefWidth="81.0" text="Label" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label id="humidity" fx:id="felt" layoutX="176.0" layoutY="215.0" prefHeight="40.0" prefWidth="70.0" text="Label" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="25.0" fitWidth="24.0" layoutX="158.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/icons8-temperature-80.png" />
+               </image>
+            </ImageView>
+            <Button id="slide" fx:id="slide" layoutX="110.0" layoutY="219.0" mnemonicParsing="false" onAction="#SlideDown">
+               <graphic>
+                  <ImageView fx:id="slideImage" fitHeight="25.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/icons8-down-button-100.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            </children>
+        </AnchorPane>
+      <AnchorPane fx:id="noConnection" layoutX="129.0" layoutY="103.0" prefHeight="243.0" prefWidth="249.0" visible="false">
+         <children>
+            <ImageView id="weather" fx:id="weather112" fitHeight="143.0" fitWidth="171.0" layoutX="54.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/icons8-cloud-lightning-96.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="80.0" layoutY="157.0" text="Whoops!" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="1.0" layoutY="172.0" prefHeight="101.0" prefWidth="249.0" text="No Internet connection found. Check your connection or try again." textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Berlin Sans FB" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="notFound" layoutX="139.0" layoutY="113.0" prefHeight="243.0" prefWidth="249.0" visible="false">
+         <children>
+            <ImageView id="weather" fx:id="weather11" fitHeight="143.0" fitWidth="171.0" layoutX="43.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/city.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="95.0" layoutY="158.0" text="Oops!" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="4.0" layoutY="151.0" prefHeight="101.0" prefWidth="249.0" text="City not found!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Berlin Sans FB" size="25.0" />
+               </font>
+            </Label>
+            <ImageView id="weather" fx:id="weather111" fitHeight="56.0" fitWidth="59.0" layoutX="43.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/icons8-high-priority-96.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="minimize" fitHeight="29.0" fitWidth="40.0" layoutX="430.0" layoutY="14.0" onMouseClicked="#minimize" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/icons8-subtract-64.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="exit" fitHeight="25.0" fitWidth="40.0" layoutX="473.0" layoutY="16.0" onMouseClicked="#exit" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/icons8-cancel-144.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="menuIcon" fitHeight="40.0" fitWidth="41.0" layoutX="14.0" layoutY="11.0" onMouseClicked="#menuIcon" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/icons8-xbox-menu-64.png" />
+         </image>
+      </ImageView>
+      <AnchorPane id="clipboard" fx:id="clipboard" layoutX="173.0" layoutY="489.0" prefHeight="72.0" prefWidth="171.0" visible="false">
+         <children>
+            <Label layoutX="29.0" layoutY="45.0" text="Copied the Clipboard">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <ImageView fitHeight="40.0" fitWidth="49.0" layoutX="66.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/icons8-paste-64.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="56.0" fitWidth="24.0" layoutX="62.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/checkmark.gif" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+    </children>
+</AnchorPane>

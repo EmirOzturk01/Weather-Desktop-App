@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="pane" fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="766.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.aaaaaaaaaaaaa.FavouriteController">
+    <AnchorPane id="menuBar" fx:id="menuBar" layoutX="15.0" layoutY="12.0" prefHeight="200.0" prefWidth="39.0">
+        <children>
+            <ImageView fx:id="screenShot" fitHeight="36.0" fitWidth="39.0" layoutX="2.0" layoutY="42.0" onMouseClicked="#weatherSnapshot" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@image/icons8-screenshot-64.png" />
+                </image>
+            </ImageView>
+            <ImageView fx:id="goToSearch" fitHeight="32.0" fitWidth="35.0" layoutX="5.0" layoutY="93.0" onMouseClicked="#switchToFav" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@image/icons8-location-96.png" />
+                </image>
+            </ImageView>
+        </children></AnchorPane>
+    <ImageView fx:id="menuIcon" fitHeight="40.0" fitWidth="41.0" layoutX="14.0" layoutY="11.0" onMouseClicked="#menuIcon" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@image/icons8-xbox-menu-64.png" />
+        </image>
+    </ImageView>
+    <ImageView fx:id="minimize" fitHeight="29.0" fitWidth="40.0" layoutX="684.0" layoutY="17.0" onMouseClicked="#minimize" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@image/icons8-subtract-64.png" />
+        </image>
+    </ImageView>
+    <ImageView fx:id="exit" fitHeight="25.0" fitWidth="40.0" layoutX="727.0" layoutY="19.0" onMouseClicked="#exit" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@image/icons8-cancel-144.png" />
+        </image>
+    </ImageView>
+   <ScrollPane hbarPolicy="NEVER" layoutX="164.0" layoutY="51.0" prefHeight="419.0" prefWidth="438.0" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-background-radius: 25px; -fx-border-radius: 25px;">
+      <content>
+         <HBox prefHeight="416.0" prefWidth="433.0">
+            <children>
+               <VBox id="hboxes" fx:id="v11" alignment="CENTER" prefHeight="327.0" prefWidth="390.0" stylesheets="@style.css" />
+               <VBox id="hboxes" fx:id="v1" alignment="CENTER" fillWidth="false" prefHeight="327.0" prefWidth="390.0" spacing="70.0" stylesheets="@style.css">
+                  <HBox.margin>
+                     <Insets />
+                  </HBox.margin>
+                  <padding>
+                     <Insets bottom="70.0" top="20.0" />
+                  </padding>
+               </VBox>
+               <VBox id="hboxes" fx:id="v111" alignment="CENTER" prefHeight="327.0" prefWidth="390.0" stylesheets="@style.css" />
+            </children>
+         </HBox>
+      </content>
+   </ScrollPane>
+</AnchorPane>
